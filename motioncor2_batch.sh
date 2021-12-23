@@ -1,3 +1,13 @@
+################################################################################
+#                                   License                                    #
+################################################################################
+
+
+
+################################################################################
+#                                     Infos                                    #
+################################################################################
+
 # Script to automatically process tilt series frames acquired with serialEM using the dose symmetric script from Wim Hagen
 #
 # Frames need to be saved as .tif files with the following naming scheme: TS_aa_bbb_cc.c.tif
@@ -11,7 +21,6 @@
 # This script will generate a hidden temporary folder called .motioncor2_temp where all intermediate files are stored.
 # The final aligend files will be saved in the folder:
 # ./02_motioncor2
-
 
 ################################################################################
 #                            Setup MotionCor2                                  #
@@ -36,8 +45,6 @@ mkdir -p .motioncor2_temp/03_aligned_unordered-stacks
 # Create final output folder
 mkdir -p  02_motioncor2
 mkdir -p  02_motioncor2_EVN_ODD
-
-
 
 ################################################################################
 #                                Run MotionCOo2                                #
