@@ -1,13 +1,10 @@
 ################################################################################
-#                                   License                                    #
-################################################################################
-
-
-
-################################################################################
 #                                     Infos                                    #
 ################################################################################
 
+# Script by Steffen Klein
+# Copyright Chlanda Lab Heidelberg
+#
 # Script to automatically process tilt series frames acquired with serialEM using the dose symmetric script from Wim Hagen
 #
 # Frames need to be saved as .tif files with the following naming scheme: TS_aa_bbb_cc.c.tif
@@ -59,7 +56,7 @@ cd ../../	# move back to working directory
 eval $motioncor -InTiff ./01_raw_data/frames/TS_ -OutMrc ./.motioncor2_temp/01_aligned_tilts/TS_
 
 ################################################################################
-#                              create tilt file                                #
+#                              Create tilt files                               #
 ################################################################################
 	
 cd ./.motioncor2_temp/01_aligned_tilts
@@ -176,10 +173,10 @@ for FILE in TS_*; do
 	fi
 done
 
-cd ../			# move back to working directory
+cd ../				# move back to working directory
 
 # Remove temporary folder
-#rm -rf ./.motioncor2_temp	# delete temporary folder
+rm -rf ./.motioncor2_temp	# delete temporary folder
 
 ################################################################################
 #                            END OF SCRIPT                                     #
